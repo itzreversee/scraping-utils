@@ -12,14 +12,22 @@
 > wallhaven/auto_sidecar-wh.py
 - Requires: Python(tested with 3.13.3) and requests library.
  - Optionally requires putting an api key, if wish to access nsfw.
- - Uses wallhaven.cc api to get tags and purity, and then create a sidecard for every file in a folder specified.
+ - Uses wallhaven.cc api to get tags and purity, and then create a sidecard for every file in specified directory.
 > konachan/auto_rename-kc.py
  - Requires: Python(tested with 3.13.3)
  - Renames files downloaded from konachan for use with auto_sidecar-kc.py
 > konachan/auto_sidecar-kc.py
  - Requires: Python(tested with 3.13.3) and library beautifulsoup4
- - Uses BeautifulSoup to scrape konachan.com for tags and purity, and then create a sidecard for every file in a folder specified.
+ - Uses BeautifulSoup to scrape konachan.com for tags and purity, and then create a sidecard for every file in specified directory.
  - Unfortunately, I could not find a way to get single post data using konachan's api. sry if there is a way and i'm dumb.
+
+## Directory
+Adjust the variable, `wallpaper_dir` to your needs.  
+By default, it assumes you have cloned/unzipped this repo, and are running scripts from their original positions, with a directory called `media` being present next to this repo directory.  
+So ***tl;dr***, it assumes this.
+- `/media/` - media folder
+- `/scraping-utils/` - this repo
+- `/scraping-utils/wallhaven/auto_sidecar-wh.py` <- running this file from it's original position
 
 ## Timeout and Rate Limiting
 Sidecar creators have 3 parameters that will space out requests so that you won't get rate limited.  
