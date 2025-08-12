@@ -6,11 +6,12 @@ wallpaper_dir = "../../media"
 # utils
 
 def scan_dir():
+  sfiles = []
   files = os.listdir(wallpaper_dir)
   for file in files:
-    if not file.lower().startswith("konachan."):
-      files.remove(file)
-  return files
+    if file.lower().startswith("konachan."):
+      sfiles.append(file)
+  return sfiles
 
 def print_list(l, prefix="- ", suffix=""):
   for e in l:

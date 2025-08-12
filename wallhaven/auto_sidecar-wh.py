@@ -57,13 +57,12 @@ def write_tags(file_name, tags):
     f.write(data)
 
 def scan_dir():
+  sfiles = []
   files = os.listdir(wallpaper_dir)
   for file in files:
-    if file.endswith(".txt"):
-      files.remove(file)
-    if not file.startswith("wallhaven-"):
-      files.remove(file)
-  return files
+    if file.startswith("wallhaven-"):
+      sfiles.append(file)
+  return sfiles
 
 def print_list(l, prefix="- ", suffix=""):
   for e in l:
