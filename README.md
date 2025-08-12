@@ -55,3 +55,8 @@ When you have a media file, let's say  `waterfall.jpg`,
 you can create a file `waterfall.jpg.txt`,  
 that will contain a set of tags, for example `waterfall` `scenery` `landscape`, all separated by newlines.  
 When choosing the import option, you can tell hydrus to get the sidecars, and it will add the tags alongside media.
+
+## Notes
+- purity tag will be formated like this `purity:safe`
+- konachan's scrapper may not be working all the time, since it relies on html scraping - not an api.
+- konachan's scrapper might work on other similar sites?
