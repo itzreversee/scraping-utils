@@ -5,6 +5,7 @@
 ### Compatibility
 - wallhaven.cc
 - konachan.net/com*
+- yande.re
 
 **the script for konachan, makes request for the .com version - since it does not restrict explicit, and someone may need it.*
 
@@ -20,6 +21,7 @@
  - Requires: Python(tested with 3.13.3) and library beautifulsoup4
  - Uses BeautifulSoup to scrape konachan.com for tags and purity, and then create a sidecard for every file in specified directory.
  - Unfortunately, I could not find a way to get single post data using konachan's api. sry if there is a way and i'm dumb.
+> yandere/* is almost identical to konachan.
 
 ## Directory
 Adjust the variable, `wallpaper_dir` to your needs.  
@@ -36,7 +38,7 @@ Sidecar creators have 3 parameters that will space out requests so that you won'
 - `timeout_request_count` specifies, every which request do we wait n seconds, so we don't get rate limited. (n being `timeout_time`).
 
 For `wallhaven.cc`, it is stated that you can do 45 request per minute, so do that.  
-I could not find such info for `konachan`, so I made it 12 requests ever 1s and then a 15s pause
+I could not find such info for `konachan` and `yande.re`, so I made it 12 requests ever 1s and then a 15s pause
 
 ## Background (boringg)
 I love collecting data, segregating them, tagging them, measuring sizes, etc.  
@@ -60,3 +62,4 @@ When choosing the import option, you can tell hydrus to get the sidecars, and it
 - purity tag will be formated like this `purity:safe`
 - konachan's scrapper may not be working all the time, since it relies on html scraping - not an api.
 - konachan's scrapper might work on other similar sites?
+- yande.re's scrapper was derived from konachan, with small changes to fix tag scraping.
